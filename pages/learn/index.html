@@ -44,6 +44,40 @@ li.dropdown {
 .dropdown:hover .dropdown-content {
     display: block;
 }
+    
+    
+    um {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+lj {
+    float: left;
+}
+
+lj b {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+lj b:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #4CAF50;
+}
+    
+    
 </style>
 </head>
 <body>
@@ -60,12 +94,12 @@ li.dropdown {
     </div>
 </ul>
 
-  <ul>
-  <li><a class="active" href="#home">Home</a></li>
-  <li><a href="#news">News</a></li>
-  <li><a href="#contact">Contact</a></li>
-  <li><a href="#about">About</a></li>
-</ul>
+  <um>
+  <lj><b class="active" href="#home">Home</b></lj>
+  <lj><b href="#news">News</b></lj>
+  <lj><b href="#contact">Contact</b></lj>
+  <lj><b href="#about">About</b></lj>
+</um>
 
 <div style="padding:20px;background-color:#1abc9c;height:1500px;">
 <h1>Fixed Bottom Navigation Bar</h1>
