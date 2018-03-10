@@ -19,7 +19,7 @@ li a, .dropbtn {
     text-decoration: none;
 }
 
-li a:hover, .dropdown:checked .dropbtn {
+li a:hover, .dropdown:hover .dropbtn {
     background-color: red;
 }
 
@@ -46,7 +46,7 @@ li.dropdown {
 
 .dropdown-content a:hover {background-color: #f1f1f1}
 
-.dropdown:checked .dropdown-content {
+.dropdown:hover .dropdown-content {
     display: block;
 }
 </style>
