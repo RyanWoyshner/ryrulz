@@ -3,15 +3,15 @@
 <head>
     <script>
         var sunday = "sleep\nmass\nfinalize SRE\nrun";
-        var monday = "breakfast\nwork\npray\nwork out\ndinner\nprepare lunch";
+        var monday = "breakfast\nwork\nrosary\nwork out\ndinner\nprepare lunch";
         var tuesday = "breakfast\nwork\npray\nSRE@6:30\nrun\ndinner\nprepare lunch";
         var wednesday = "breakfast\nwork\npray\nwork out\ndinner\nprepare lunch";
         var thursday = "breakfast\nwork\npray\nrun\ndinner\nprepare SRE\nprepare lunch";
         var friday = "breakfast\nwork\npray\njack work out\ndinner";
         var saturday = "breakfast\nrochelle";
-        var content = "";
+        var schedule = "";
         function changeContent(days){
-            content = days;
+            schedule = days;
 }
     </script>
 <style>
@@ -74,15 +74,15 @@ li.dropdown {
 </ul>
 
     <h3 style="color:blue;">Welcome, Ryan! Here is your schedule for this week:</h3>
-    <button type="button" onclick=changeContent(sunday) >Sunday</button>
-    <button type="button" onclick=changeContent(monday) >Monday</button>
-    <button type="button" onclick=changeContent(tuesday) >Tuesday</button>
-    <button type="button" onclick=changeContent(wednesday) >Wednesday</button>
-    <button type="button" onclick=changeContent(thursday) >Thursday</button>
-    <button type="button" onclick=changeContent(friday) >Friday</button>
-    <button type="button" onclick=changeContent(saturday) >Saturday</button>
+    <button type="button" onclick='changeContent(sunday); document.getElementById("content").innerHTML = schedule;' >Sunday</button>
+    <button type="button" onclick='changeContent(monday); document.getElementById("content").innerHTML = schedule;'>Monday</button>
+    <button type="button" onclick='changeContent(tuesday); document.getElementById("content").innerHTML = schedule;'>Tuesday</button>
+    <button type="button" onclick='changeContent(wednesday); document.getElementById("content").innerHTML = schedule;'>Wednesday</button>
+    <button type="button" onclick='changeContent(thursday); document.getElementById("content").innerHTML = schedule;'>Thursday</button>
+    <button type="button" onclick='changeContent(friday); document.getElementById("content").innerHTML = schedule;'>Friday</button>
+    <button type="button" onclick='changeContent(saturday); document.getElementById("content").innerHTML = schedule;'>Saturday</button>
     <br>
-    {{this.content}}<p>this.content</p>
+    <p id = "content">Click on a day to see schedule.</p>
 </body>
 </html>
 
