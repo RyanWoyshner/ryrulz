@@ -9,6 +9,10 @@
         var thursday = "breakfast\nwork\npray\nrun\ndinner\nprepare SRE\nprepare lunch";
         var friday = "breakfast\nwork\npray\njack work out\ndinner";
         var saturday = "breakfast\nrochelle";
+        var content = "";
+        function changeContent(days){
+            content = days;
+}
     </script>
 <style>
 ul {
@@ -70,13 +74,15 @@ li.dropdown {
 </ul>
 
     <h3 style="color:blue;">Welcome, Ryan! Here is your schedule for this week:</h3>
-    <button type="button" onclick=alert(sunday) >Sunday</button>
+    <button type="button" onclick=changeContent(sunday) >Sunday</button>
     <button type="button" onclick=alert(monday) >Monday</button>
     <button type="button" onclick=alert(tuesday) >Tuesday</button>
     <button type="button" onclick=alert(wednesday) >Wednesday</button>
     <button type="button" onclick=alert(thursday) >Thursday</button>
     <button type="button" onclick=alert(friday) >Friday</button>
     <button type="button" onclick=alert(saturday) >Saturday</button>
+    <br>
+    <p>{{content}}</p>
 </body>
 </html>
 
