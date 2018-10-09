@@ -2,17 +2,19 @@
 <html>
 <head>
     <script>
-        var sunday = "sleep, mass, finalize SRE, run, prepare lunch";
-        var monday = "breakfast, work, rosary, work out, dinner, prepare lunch";
-        var tuesday = "breakfast, work, pray, SRE@6:30, run, dinner, prepare lunch";
-        var wednesday = "breakfast, work, pray, work out, dinner, prepare lunch";
-        var thursday = "breakfast, work, pray, run, dinner, prepare SRE, prepare lunch";
-        var friday = "breakfast, work, pray, jack work out, dinner";
-        var saturday = "breakfast, rochelle";
+        var d = new Date();
+        var n = d.getDay();
+        var days = ["sleep, mass, finalize SRE, run, prepare lunch",
+                    "breakfast, work, rosary, work out, dinner, prepare lunch",
+                    "breakfast, work, pray, SRE@6:30, run, dinner, prepare lunch",
+                    "breakfast, work, pray, work out, dinner, prepare lunch",
+                    "breakfast, work, pray, run, dinner, prepare SRE, prepare lunch",
+                    "breakfast, work, pray, jack work out, dinner",
+                    "breakfast, rochelle"];
         var schedule = "";
-        function changeContent(days){
-            schedule = days;
-}
+        function updateContent(){
+            schedule = days[n];
+        }
     </script>
 <style>
 ul {
@@ -74,16 +76,10 @@ li.dropdown {
     </div>
 </ul>
 
-    <h3 style="color:blue;">Welcome, Ryan! Here is your schedule for this week:</h3>
-    <button type="button" onclick='changeContent(sunday); document.getElementById("content").innerHTML = schedule;' >Sunday</button>
-    <button type="button" onclick='changeContent(monday); document.getElementById("content").innerHTML = schedule;'>Monday</button>
-    <button type="button" onclick='changeContent(tuesday); document.getElementById("content").innerHTML = schedule;'>Tuesday</button>
-    <button type="button" onclick='changeContent(wednesday); document.getElementById("content").innerHTML = schedule;'>Wednesday</button>
-    <button type="button" onclick='changeContent(thursday); document.getElementById("content").innerHTML = schedule;'>Thursday</button>
-    <button type="button" onclick='changeContent(friday); document.getElementById("content").innerHTML = schedule;'>Friday</button>
-    <button type="button" onclick='changeContent(saturday); document.getElementById("content").innerHTML = schedule;'>Saturday</button>
+    <h3 style="color:blue;">Welcome, Ryan! Here is your schedule for today:</h3>
+    <button type="button" onclick='updateContent(); document.getElementById("content").innerHTML = schedule;'>Generate Schedule</button>
     <br>
-    <p id = "content">Click on a day to see schedule.</p>
+    <p id = "content">Click button to see schedule.</p>
 </body>
 </html>
 
