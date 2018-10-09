@@ -1,23 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <script>
-        var d = new Date();
-        var n = d.getDay();
-        var days = ["sleep, mass, finalize SRE, run, prepare lunch",
-                    "breakfast, work, rosary, work out, dinner, prepare lunch",
-                    "breakfast, work, pray, SRE@6:30, run, dinner, prepare lunch",
-                    "breakfast, work, pray, work out, dinner, prepare lunch",
-                    "breakfast, work, pray, run, dinner, prepare SRE, prepare lunch",
-                    "breakfast, work, pray, jack work out, dinner",
-                    "breakfast, rochelle"];
-        var schedule = "";
-        function updateContent(){
-            schedule = days[n];
-        }
-        updateContent();
-        document.getElementById("content").innerHTML = schedule;
-    </script>
+    
 <style>
 ul {
     list-style-type: none;
@@ -79,9 +63,25 @@ li.dropdown {
 </ul>
 
     <h3 style="color:blue;">Welcome, Ryan! Here is your schedule for today:</h3>
-    <!--<button type="button" onclick='updateContent(); document.getElementById("content").innerHTML = schedule;'>Generate Schedule</button>-->
     <br>
     <p id = "content">Click button to see schedule.</p>
+    
+    <script>
+        var d = new Date();
+        var n = d.getDay();
+        var schedule = ["sleep, mass, finalize SRE, run, prepare lunch",
+                    "breakfast, work, rosary, work out, dinner, prepare lunch",
+                    "breakfast, work, pray, SRE@6:30, run, dinner, prepare lunch",
+                    "breakfast, work, pray, work out, dinner, prepare lunch",
+                    "breakfast, work, pray, run, dinner, prepare SRE, prepare lunch",
+                    "breakfast, work, pray, jack work out, dinner",
+                    "breakfast, rochelle"];
+        function updateContent(){
+            return schedule[n];
+        }
+        document.getElementById("content").innerHTML = schedule[n];
+    </script>
+    
 </body>
 </html>
 
