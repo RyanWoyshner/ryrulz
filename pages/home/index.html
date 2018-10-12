@@ -63,14 +63,25 @@ li.dropdown {
 </ul>
 
     <h3 style="color:blue;">Welcome, Ryan! Here is your schedule for today:</h3>
-    <br>
     <p id = "content"></p>
     <br>
+    <h3 style="color:blue;">Special Events:</h3>
+    <p id = "events"></p>
+    <br>
+    <h3 style="color:blue;">Programming Projects:</h3>
     <p id = "programs"></p>
-    
+    <h3 style="color:blue;">Otehr Info:</h3>
+    <p> sunny fish daddy sisters roch
+        dishes ani language email clean program
+        deleteemail mang
+
+        programming job, food, update things, poke, angelsOD</p>
     <script>
         var d = new Date();
         var n = d.getDay();
+        var m = d.getMonth();
+        var w = d.getDate();
+        var y = d.getFullYear();
         var schedule = [
                     "breakfast, mass, sleep, finalize SRE, run, prepare lunch, program",
                     "breakfast, work, pray, work out, dinner, prepare lunch, program",
@@ -83,13 +94,34 @@ li.dropdown {
         function updateContent(){
             return schedule[n];
         }
+        function updateEvents(){
+            if (m == "10" && w == "16")
+                return "Adoration at 10:30";
+            else if (m == "10" && w == "21")
+                return "San Fran? nah";
+            else if (m == "10" && w == "23")
+                return "Birfday Dinner";
+            else if (m == "10" && w == "27")
+                return "Confession. Last was 10/6";
+            else if (m == "10" && w == "31")
+                return "Poppy!!!";
+            else if (m == "1" && w == "25" && y == "2019")
+                return "Dentist at 8:00";
+            else if (y == "2020")
+                return "Eucharistic Minister";
+            else if (y == "2021")
+                return "Safe Haven";
+            else
+                return "No events for today.";
+        }
         function updatePrograms(){
             if (schedule[n].includes('program') == true)
                 return projects;
             else
-                return null;
+                return "Go have fun.";
         }
         document.getElementById("content").innerHTML = updateContent();
+        document.getElementById("events").innerHTML = updateEvents();
         document.getElementById("programs").innerHTML = updatePrograms();
     </script>
     
