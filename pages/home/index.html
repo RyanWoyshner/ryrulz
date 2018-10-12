@@ -64,22 +64,33 @@ li.dropdown {
 
     <h3 style="color:blue;">Welcome, Ryan! Here is your schedule for today:</h3>
     <br>
-    <p id = "content">Click button to see schedule.</p>
+    <p id = "content"></p>
+    <br>
+    <p id = "programs"></p>
     
     <script>
         var d = new Date();
         var n = d.getDay();
-        var schedule = ["sleep, mass, finalize SRE, run, prepare lunch",
-                    "breakfast, work, rosary, work out, dinner, prepare lunch",
+        var schedule = [
+                    "breakfast, mass, sleep, finalize SRE, run, prepare lunch, program",
+                    "breakfast, work, pray, work out, dinner, prepare lunch, program",
                     "breakfast, work, pray, SRE@6:30, run, dinner, prepare lunch",
-                    "breakfast, work, pray, work out, dinner, prepare lunch",
-                    "breakfast, work, pray, run, dinner, prepare SRE, prepare lunch",
+                    "breakfast, work, pray, work out, dinner, prepare lunch, program",
+                    "breakfast, work, pray, run, dinner, prepare lunch, program",
                     "breakfast, work, pray, jack work out, dinner",
                     "breakfast, rochelle"];
+        var projects = "language learner ionic, calendar github, language game windows forms, twitter download pics, daily readings facebook, made in abyss game unity, adoration vr"
         function updateContent(){
             return schedule[n];
         }
-        document.getElementById("content").innerHTML = schedule[n];
+        function updatePrograms(){
+            if (schedule[n].includes('program') == true)
+                return projects;
+            else
+                return null;
+        }
+        document.getElementById("content").innerHTML = updateContent();
+        document.getElementById("programs").innerHTML = updatePrograms();
     </script>
     
 </body>
