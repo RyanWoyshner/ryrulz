@@ -61,7 +61,7 @@
                     </li>
                 </ul>
                 <ul class="navbar-nav mr-right">
-                    <a class="nav-link" href="resume.html"><br>Resume
+                    <a class="nav-link" href="resume.html">Resume
                         <span class="sr-only">(current)</span>
                     </a>
                 </ul>
@@ -72,66 +72,68 @@
     <main role="main">
         <div class="album py-5 bg-light">
             <div class="container marketing">
-                <h2 class="featurette-heading">Welcome, Ryan! Here is your schedule for today:</h2>
-                <p id = "content"></p>
-                <br>
-                <h3 style="color:blue;">Special Events:</h3>
-                <p id = "events"></p>
-                <br>
-                <h3 style="color:blue;">Programming Projects:</h3>
-                <p id = "programs"></p>
-                <br>
-                <h3 style="color:blue;">Other Info:</h3>
-                <p>sunny fish daddy sisters roch</p>
-                <p>dishes ani language email clean program</p>
-                <p>deleteemail mang</p>
-                <p>programming side, food, update things, poke, angelsOD</p>
-                <script>
-                    var d = new Date();
-                    var n = d.getDay();
-                    var m = d.getMonth();
-                    var w = d.getDate();
-                    var y = d.getFullYear();
-                    var schedule = [
-                                "breakfast, mass, sleep, finalize SRE, run, prepare lunch, program",
-                                "breakfast, work, pray, work out, dinner, prepare lunch, program",
-                                "breakfast, work, pray, SRE@6:30, run, dinner, prepare lunch",
-                                "breakfast, work, pray, work out, dinner, prepare lunch, program",
-                                "breakfast, work, pray, run, dinner, prepare lunch, program",
-                                "breakfast, work, pray, jack work out, dinner",
-                                "breakfast, rochelle"];
-                    var projects = "language learner ionic, calendar github, language game windows forms, twitter download pics, daily readings facebook, made in abyss game unity, adoration vr, highlight app"
-                    function updateContent(){
-                        return schedule[n];
-                    }
-                    function updateEvents(){
-                        if (m == "10" && w == "16")
-                            return "Adoration at 10:30";
-                        else if (m == "9" && w == "23")
-                            return "Birfday Dinner";
-                        else if (m == "9" && w == "27")
-                            return "Confession. Last was 10/6. Birfday Dinner wif frwiends :3";
-                        else if (m == "9" && w == "31")
-                            return "Poppy!!!";
-                        else if (m == "0" && w == "25" && y == "2019")
-                            return "Dentist at 8:00";
-                        else if (y == "2020")
-                            return "Eucharistic Minister";
-                        else if (y == "2021")
-                            return "Safe Haven";
-                        else
-                            return "No events for today.";
-                    }
-                    function updatePrograms(){
-                        if (schedule[n].includes('program') == true)
-                            return projects;
-                        else
-                            return "Go have fun.";
-                    }
-                    document.getElementById("content").innerHTML = updateContent();
-                    document.getElementById("events").innerHTML = updateEvents();
-                    document.getElementById("programs").innerHTML = updatePrograms();
-                </script>
+                <div class="col-md-7">
+                    <h2 class="featurette-heading">Welcome, Ryan! Here is your schedule for today:</h2>
+                    <p id = "content"></p>
+                    <br>
+                    <h3 style="color:blue;">Special Events:</h3>
+                    <p id = "events"></p>
+                    <br>
+                    <h3 style="color:blue;">Programming Projects:</h3>
+                    <p id = "programs"></p>
+                    <br>
+                    <h3 style="color:blue;">Other Info:</h3>
+                    <p>sunny fish daddy sisters roch</p>
+                    <p>dishes ani language email clean program</p>
+                    <p>deleteemail mang</p>
+                    <p>programming side, food, update things, poke, angelsOD</p>
+                    <script>
+                        var d = new Date();
+                        var n = d.getDay();
+                        var m = d.getMonth();
+                        var w = d.getDate();
+                        var y = d.getFullYear();
+                        var schedule = [
+                                    "breakfast, mass, sleep, finalize SRE, run, prepare lunch, program",
+                                    "breakfast, work, pray, work out, dinner, prepare lunch, program",
+                                    "breakfast, work, pray, SRE@6:30, run, dinner, prepare lunch",
+                                    "breakfast, work, pray, work out, dinner, prepare lunch, program",
+                                    "breakfast, work, pray, run, dinner, prepare lunch, program",
+                                    "breakfast, work, pray, jack work out, dinner",
+                                    "breakfast, rochelle"];
+                        var projects = "language learner ionic, calendar github, language game windows forms, twitter download pics, daily readings facebook, made in abyss game unity, adoration vr, highlight app"
+                        function updateContent(){
+                            return schedule[n];
+                        }
+                        function updateEvents(){
+                            if (m == "10" && w == "16")
+                                return "Adoration at 10:30";
+                            else if (m == "9" && w == "23")
+                                return "Birfday Dinner";
+                            else if (m == "9" && w == "27")
+                                return "Confession. Last was 10/6. Birfday Dinner wif frwiends :3";
+                            else if (m == "9" && w == "31")
+                                return "Poppy!!!";
+                            else if (m == "0" && w == "25" && y == "2019")
+                                return "Dentist at 8:00";
+                            else if (y == "2020")
+                                return "Eucharistic Minister";
+                            else if (y == "2021")
+                                return "Safe Haven";
+                            else
+                                return "No events for today.";
+                        }
+                        function updatePrograms(){
+                            if (schedule[n].includes('program') == true)
+                                return projects;
+                            else
+                                return "Go have fun.";
+                        }
+                        document.getElementById("content").innerHTML = updateContent();
+                        document.getElementById("events").innerHTML = updateEvents();
+                        document.getElementById("programs").innerHTML = updatePrograms();
+                    </script>
+                </div>
             </div>
         </div>
 
