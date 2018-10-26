@@ -16,7 +16,7 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
 
-    <title>Ryan Woyshner | Resume</title>
+    <title>Ryan Woyshner | Schedule</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
@@ -49,6 +49,9 @@
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="projects.html">Projects</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" href="schedule.html">Schedule</a>
@@ -101,17 +104,16 @@
                                     "breakfast, work, pray, run, dinner, prepare lunch, program",
                                     "breakfast, work, pray, jack work out, dinner",
                                     "breakfast, rochelle"];
-                        var projects = "language learner ionic, calendar github, language game windows forms, twitter download pics, daily readings facebook, made in abyss game unity, adoration vr, highlight app"
                         function updateContent(){
                             return schedule[n];
                         }
                         function updateEvents(){
                             if (m == "10" && w == "16")
                                 return "Adoration at 10:30";
-                            else if (m == "9" && w == "23")
-                                return "Birfday Dinner";
                             else if (m == "9" && w == "27")
-                                return "Confession. Last was 10/6. Birfday Dinner wif frwiends :3";
+                                return "Confession. Last was 10/6.";
+                            else if (m == "9" && w == "28")
+                                return "Oktoberfest"
                             else if (m == "9" && w == "31")
                                 return "Poppy!!!";
                             else if (m == "0" && w == "25" && y == "2019")
