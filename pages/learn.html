@@ -94,13 +94,9 @@
                         var pronunciation = [
                                     "a", "i", "u", "e", "o"];
                         function showPronunciation(){
-                            document.getElementById("Pronunciation").innerHTML.style.visibility = "visible";
                         }
                         function newHiragana(){
-                            document.getElementById("Pronunciation").innerHTML.style.visibility = "hidden";
                             generateRandomNumber(0, 4);
-                            document.getElementById("Hiragana").innerHTML = hiragana[n];
-                            document.getElementById("Pronunciation").innerHTML = pronunciation[n];
                         }
                         function generateRandomNumber(min, max){
                             n = Math.random() * (max-min) + min ;
