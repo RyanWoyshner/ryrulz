@@ -98,11 +98,17 @@
                         function newHiragana(){
                             generateRandomNumber(0, 4);
                         }
+                        function updateHiragana(){
+                            return hiragana[n]
+                        }
+                        function updatePronunciation(){
+                            return pronunciation[n];
+                        }
                         function generateRandomNumber(min, max){
                             n = Math.random() * (max-min) + min ;
                         }
-                        document.getElementById("Hiragana").innerHTML = hiragana[n];
-                        document.getElementById("Pronunciation").innerHTML = pronunciation[n];
+                        document.getElementById("Hiragana").innerHTML = updateHiragana();
+                        document.getElementById("Pronunciation").innerHTML = updatePronunciation();
                     </script>
                 </div>
             </div>
