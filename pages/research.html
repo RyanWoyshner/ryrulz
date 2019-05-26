@@ -16,7 +16,7 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
 
-    <title>Ryan Woyshner | Schedule</title>
+    <title>Ryan Woyshner | Research</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
@@ -54,12 +54,6 @@
                         <a class="nav-link" href="projects.html">Projects</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="schedule.html">Schedule</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="learn.html">Learn</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="research.html">Research</a>
                     </li>
                 </ul>
@@ -73,71 +67,15 @@
     </header>
 
     <main role="main">
-        <div class="album py-5 bg-light">
-            <div class="container marketing">
-                <div class="col-md-7">
-                    <h3 style="color:blue;"><br>Welcome, Ryan! Here is your schedule for today:</h3>
-                    <p id = "content"></p>
-                    <br>
-                    <h3 style="color:blue;">Special Events:</h3>
-                    <p id = "events"></p>
-                    <br>
-                    <h3 style="color:blue;">Programming Projects:</h3>
-                    <p id = "programs"></p>
-                    <br>
-                    <h3 style="color:blue;">Other Info:</h3>
-                    <p>sunny fish daddy sisters roch</p>
-                    <p>dishes ani language email clean program</p>
-                    <p>deleteemail mang</p>
-                    <p>programming side, food, update things, poke, angelsOD</p>
-                    <script>
-                        var d = new Date();
-                        var n = d.getDay();
-                        var m = d.getMonth();
-                        var w = d.getDate();
-                        var y = d.getFullYear();
-                        var schedule = [
-                                    "breakfast, mass, sleep, finalize SRE, run, prepare lunch, program",
-                                    "breakfast, work, pray, work out, dinner, prepare lunch, program",
-                                    "breakfast, work, pray, SRE@6:30, run, dinner, prepare lunch",
-                                    "breakfast, work, pray, work out, dinner, prepare lunch, program",
-                                    "breakfast, work, pray, run, dinner, prepare lunch, program",
-                                    "breakfast, work, pray, jack work out, dinner",
-                                    "breakfast, rochelle"];
-                        function updateContent(){
-                            return schedule[n];
-                        }
-                        function updateEvents(){
-                            if (m == "11" && w == "16")
-                                return "Adoration at 10:30";
-                            else if (m == "11" && w == "5")
-                                return "Confession. Last was 11/11.";
-                            else if (m == "11" && w == "13")
-                                return "Pence dinner.";
-                            else if (m == "0" && w == "25")
-                                return "Dentist at 8:00";
-                            else if (m == "2" && w == "22")
-                                return "Fashion show come at 10am";
-                            else if (y == "2020")
-                                return "Eucharistic Minister";
-                            else if (y == "2021")
-                                return "Safe Haven";
-                            else
-                                return "No events for today.";
-                        }
-                        function updatePrograms(){
-                            if (schedule[n].includes('program') == true)
-                                return "Click link above for active projects.";
-                            else
-                                return "Go have fun.";
-                        }
-                        document.getElementById("content").innerHTML = updateContent();
-                        document.getElementById("events").innerHTML = updateEvents();
-                        document.getElementById("programs").innerHTML = updatePrograms();
-                    </script>
-                </div>
-            </div>
-        </div>
+
+            <section class="jumbotron text-center">
+              <div class="container">
+                <h1 class="jumbotron-heading">Research</h1>
+                <p class="lead text-muted">Below are links for researching programming languages.</p>
+              </div>
+            </section>
+      
+            <div class="album py-5 bg-light">
 
         <!-- FOOTER -->
         <footer class="container">
